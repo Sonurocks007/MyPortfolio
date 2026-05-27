@@ -125,24 +125,6 @@ const projectsData = [
             "Highly configurable custom field builder, CSV spreadsheet parser, and PDF generator engines"
         ],
         order: 2
-    },
-    {
-        title: "Dog Sitter Web Application",
-        shortDescription: "A full-stack Spring Boot web application featuring location search, MVC pages, and secure JWT.",
-        description: "Developed a full-stack MVC web application with role-based JWT authentication, Spring Security, location-based search, file upload, SQL pagination, and server-side rendering.",
-        cardImageUrl: "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=600&q=80",
-        imageUrls: [
-            "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=800&q=80"
-        ],
-        techStack: ["Spring Boot", "Spring Security", "JWT", "MySQL", "MVC", "Java"],
-        demoLink: "https://dogsitter-demo.vercel.app",
-        repoLink: "https://github.com/Sonurocks007",
-        features: [
-            "Secure Spring Security authentication layer with JWT validation parameters",
-            "Location-based dog sitter finder search filtering systems",
-            "Built-in SQL pagination, server-side page layouts, and document uploads"
-        ],
-        order: 3
     }
 ];
 async function seedDatabase() {
