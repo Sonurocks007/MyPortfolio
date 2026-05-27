@@ -212,10 +212,10 @@ export default function Header() {
                       )}
 
                       {/* Content container */}
-                      <div className="relative flex items-center gap-2 px-4 py-2.5 rounded-2xl transition-all duration-300">
+                      <div className="relative flex items-center gap-2 px-3 py-2 rounded-2xl transition-all duration-300">
                         {/* Icon with enhanced styling */}
                         <motion.div
-                          className={`relative p-2 rounded-xl transition-all duration-300 ${
+                          className={`relative p-1.5 rounded-xl transition-all duration-300 ${
                             isActive 
                               ? `bg-gradient-to-r ${item.color} text-white shadow-lg` 
                               : "text-gray-600 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white"
@@ -271,14 +271,14 @@ export default function Header() {
 
               {/* Desktop Theme Toggle */}
               <motion.div
-                className="relative ml-3"
+                className="relative ml-3 flex items-center"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.5 }}
               >
                 <motion.button
                   onClick={toggleDarkMode}
-                  className="relative w-16 h-9 rounded-full bg-gradient-to-r from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-600 transition-all duration-300 shadow-lg border border-white/20 dark:border-gray-600/20"
+                  className="relative w-12 h-7 rounded-full bg-gradient-to-r from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-600 transition-all duration-300 shadow-lg border border-white/20 dark:border-gray-600/20 cursor-pointer"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   aria-label="Toggle dark mode"
@@ -293,9 +293,9 @@ export default function Header() {
                   
                   {/* Toggle bubble */}
                   <motion.div
-                    className="absolute top-1 left-1 w-7 h-7 rounded-full bg-white dark:bg-gray-900 shadow-xl flex items-center justify-center border border-gray-200 dark:border-gray-700"
+                    className="absolute top-1 left-1 w-5 h-5 rounded-full bg-white dark:bg-gray-900 shadow-xl flex items-center justify-center border border-gray-200 dark:border-gray-700"
                     animate={{
-                      x: darkMode ? 28 : 0,
+                      x: darkMode ? 20 : 0,
                       rotate: darkMode ? 180 : 0,
                     }}
                     transition={{ type: "spring", stiffness: 500, damping: 30 }}
@@ -309,7 +309,7 @@ export default function Header() {
                           exit={{ rotate: 90, opacity: 0 }}
                           transition={{ duration: 0.2 }}
                         >
-                          <HiMoon className="w-4 h-4 text-blue-500" />
+                          <HiMoon className="w-3 h-3 text-blue-500" />
                         </motion.div>
                       ) : (
                         <motion.div
@@ -319,7 +319,7 @@ export default function Header() {
                           exit={{ rotate: -90, opacity: 0 }}
                           transition={{ duration: 0.2 }}
                         >
-                          <HiSun className="w-4 h-4 text-yellow-500" />
+                          <HiSun className="w-3 h-3 text-yellow-500" />
                         </motion.div>
                       )}
                     </AnimatePresence>

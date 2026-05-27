@@ -591,7 +591,7 @@ export default function Home() {
                       <img
                         src={tech.icon}
                         alt={`${tech.name} logo`}
-                        className="relative z-10 w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 object-contain transform group-hover:scale-110 transition-transform duration-300 filter group-hover:brightness-110"
+                        className="relative z-10 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 object-contain transform group-hover:scale-110 transition-transform duration-300 filter group-hover:brightness-110"
                         loading="lazy"
                       />
 

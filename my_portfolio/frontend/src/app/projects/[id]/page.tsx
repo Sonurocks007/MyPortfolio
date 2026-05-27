@@ -13,36 +13,56 @@ interface PageProps {
 const fallbackProjects: Project[] = [
   {
     _id: "p1",
-    title: "E-Commerce Web Platform",
-    description: "Designed and launched a full-stack multi-department e-commerce platform with 6 product categories, customer storefront, and admin panel, serving real users in production. Built responsive product listings with dynamic zoom, advanced filters/sorting, OTP/CAPTCHA secure login, JWT expiry handlers, dynamic sidebar panels, and 5-language localization (English, Arabic, French, Hindi, Urdu) with RTL layout.",
-    shortDescription: "Production-Grade 6-Category E-Commerce Hub with Admin Panel and 5 Languages.",
+    title: "E-Commerce Platform — Storefront + Admin Panel",
+    description: "Built a full-featured multi-department e-commerce storefront (Womenswear, Menswear, Kidswear, Accessories, Bags, Shoes, Sale) with dynamic department landing pages, product listing with advanced filter/sort drawers, image-zoom product detail, vendor store pages, and a cart with localStorage persistence, size-swap merge logic, and full checkout flow. Developed comprehensive authentication flows with OTP verification and reCAPTCHA protection. Built the Admin Panel with Recharts/ApexCharts dashboards, full CRUD for Products, Categories, Sub-Categories, Attributes, and Coupons using TanStack Table with server-side pagination.",
+    shortDescription: "Full-Featured Multi-Department E-Commerce Hub with Admin Panel, Vendor Management & 5-Language Support.",
     imageUrl: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=800",
-    techStack: ["Next.js", "React.js", "TypeScript", "Node.js", "Redux Toolkit", "PostgreSQL", "Firebase"],
+    techStack: ["Next.js 16", "React 19", "TypeScript", "TanStack React Query", "TanStack Table", "Redux Toolkit", "Tailwind CSS v4", "Recharts", "Firebase", "Formik", "Yup"],
     demoLink: "https://ecommerce-demo.vercel.app",
     repoLink: "https://github.com/Sonurocks007",
     features: [
-      "Designed and launched a full-stack multi-department e-commerce platform with 6 product categories, customer storefront, and admin panel.",
-      "Built responsive product listings with advanced filtering, sorting, and image zoom, improving user navigation.",
-      "Established secure authentication using OTP, CAPTCHA, and JSON Web Tokens with interceptors for automatic session expiry.",
-      "Engineered Admin Panel with sales analytics dashboards and full CRUD for products, categories, and coupons with server-side pagination.",
-      "Implemented 4-stage vendor onboarding, subscription management, payout tracking, and RBAC user management with Two-Factor Authentication.",
-      "Integrated 5-language support (English, Arabic, French, Hindi, Urdu) with RTL layout, dark/light theme, and dynamic API-driven sidebar."
+      "Built a full-featured multi-department e-commerce storefront with 7 departments (Womenswear, Menswear, Kidswear, Accessories, Bags, Shoes, Sale) with dynamic landing pages and advanced filter/sort drawers.",
+      "Developed comprehensive authentication flows: Sign In/Up modal, Forgot Password with OTP verification, Set New Password — using Formik + Yup validation with reCAPTCHA protection and JWT Bearer interceptors.",
+      "Implemented multi-language i18n (English, Arabic, French, Hindi, Urdu) with Language Context and modal selector, and dark/light theme switching via next-themes.",
+      "Built the Admin Panel with Recharts/ApexCharts dashboards (Sales Chart, Revenue Stats, Top Selling Products, Top Customers) and full CRUD for Products, Categories, Attributes, and Coupons using TanStack Table.",
+      "Engineered Vendor Management: multi-step onboarding (Personal → Contact → Store → Bank), subscription plan management, payout tracking, and User & Role Management with granular RBAC and Two-Factor Authentication.",
+      "Designed a dynamic API-driven sidebar (Vertical + Horizontal layouts) with icon mapping, collapsible groups, mobile portal, and customizable background themes."
     ]
   },
   {
     _id: "p2",
-    title: "Lead Management Software System",
-    description: "Architected a high-performance CRM lead management monorepo with 3 applications (client portal, admin cockpit, server) and shared packages, slashing code duplication by 40%+. Configured lightning-fast telemetry dashboards updating staff via Server-Sent Events (SSE), granular per-module Role-Based Access Control, Firebase push alerts, custom fields, and bulk operations (CSV parser, PDF generators).",
-    shortDescription: "High-Performance Monorepo CRM Platform with SSE Live Analytics Stream.",
+    title: "LeadTracyz — Real-Time Multi-Tenant Lead Management SaaS",
+    description: "Architected and delivered a Turborepo monorepo (pnpm workspaces) with three apps — web-app (company/staff portal), admin-panel (super-admin), backend — and shared packages (@leadtracz/types, @leadtracz/utils, @leadtracz/ui) for DRY cross-app consistency. Built the core lead management engine with full CRUD, advanced multi-filter search, bulk CSV/Excel import-export via Papaparse, PDF export per lead via pdf-lib, lead transfer between staff, and configurable custom lead fields per company.",
+    shortDescription: "Turborepo Monorepo SaaS CRM with SSE Real-Time Analytics, RBAC & Firebase Push Notifications.",
     imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800",
-    techStack: ["Next.js", "React.js", "TypeScript", "Node.js", "PostgreSQL", "Firebase", "Server-Sent Events"],
+    techStack: ["Turborepo", "Next.js 16", "React 19", "TypeScript", "Redux Toolkit", "TanStack React Query", "SSE", "Firebase FCM", "Leaflet Maps", "Papaparse", "pdf-lib"],
     demoLink: "https://leadcrm-demo.vercel.app",
     repoLink: "https://github.com/Sonurocks007",
     features: [
-      "Architected a monorepo with 3 applications (web app, admin panel, backend) and shared packages for types, utilities, and UI — reducing code duplication by 40%+.",
-      "Constructed lead management engine with full CRUD, 7+ search filters, bulk CSV import and export, PDF generation, and configurable custom fields.",
-      "Configured real-time notification system using Server-Sent Events with automatic reconnect, enabling live dashboard updates with minimal latency.",
-      "Strengthened security with granular Role-Based Access Control (per-module, per-action), proxy-token super-admin access, and Firebase push notifications."
+      "Architected a Turborepo monorepo (pnpm workspaces) with three apps — web-app, admin-panel, backend — and shared packages (@leadtracz/types, @leadtracz/utils, @leadtracz/ui) reducing code duplication by 40%+.",
+      "Built the core lead management engine: full CRUD with advanced multi-filter search (status, tags, source, assigned staff, date range), bulk CSV/Excel import-export via Papaparse, and PDF export per lead via pdf-lib.",
+      "Implemented Server-Sent Events (SSE) real-time engine with custom SSEContext/Provider — auto-reconnect with exponential backoff, named event subscriptions, and memory-leak-safe cleanup.",
+      "Built granular RBAC permission system: per-module per-action checks, staff vs. company user-type detection, and proxy-token support for super-admin login-as-company with JWT encrypted cookie storage.",
+      "Developed Broadcast messaging system: create/schedule/send/cancel broadcasts with target-type filtering, multi-channel support, priority levels, and status tracking.",
+      "Built interactive Leaflet map dashboards with marker clustering for geographic lead visualization, staff performance analytics with Recharts, and a Support Ticket system with attachment preview."
+    ]
+  },
+  {
+    _id: "p3",
+    title: "Dog Sitter Application",
+    description: "Developed a Model-View-Controller (MVC)-based web application using Spring Boot to manage dog sitter registration, role-based JWT authentication (Spring Security), and location-based search with HTTP endpoints and JSP for dynamic content rendering. Integrated Multipart File Upload, SQL-based pagination, location-based search, and Spring Security profile management.",
+    shortDescription: "Spring Boot MVC Application with JWT Auth, Location-Based Search & File Upload.",
+    imageUrl: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?q=80&w=800",
+    techStack: ["Spring Boot", "Spring Security", "JWT", "JSP", "MySQL", "MVC Architecture"],
+    demoLink: "",
+    repoLink: "https://github.com/Sonurocks007",
+    features: [
+      "Developed a Model-View-Controller (MVC)-based web application using Spring Boot to manage dog sitter registration and profile management.",
+      "Implemented role-based JWT authentication using Spring Security for secure access control.",
+      "Built location-based search with HTTP endpoints for finding nearby dog sitters.",
+      "Integrated Multipart File Upload for dog sitter profile images and documents.",
+      "Implemented SQL-based pagination for efficient data retrieval and browsing.",
+      "Used JSP for dynamic server-side content rendering with responsive layouts."
     ]
   }
 ];
@@ -261,7 +281,7 @@ const ProjectNotFound = () => (
 
 const ProjectContent = ({ project, linkLoading, handleLinkClick }: any) => (
   <>
-    <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black mb-6 sm:mb-8 bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 dark:from-white dark:via-blue-200 dark:to-purple-200 bg-clip-text text-transparent leading-tight">
+    <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black mb-6 sm:mb-8 bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 dark:from-white dark:via-blue-200 dark:to-purple-200 bg-clip-text text-transparent leading-tight">
       {project.title}
     </h1>
 
