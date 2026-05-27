@@ -11,7 +11,7 @@ const getBaseURL = () => {
     return 'http://localhost:5000/api';
   }
   
-  return 'https://sonu-portfolio-backend.onrender.com/api';
+  return 'https://myportfolio-kvyg.onrender.com/api';
 };
 
 const API = axios.create({
