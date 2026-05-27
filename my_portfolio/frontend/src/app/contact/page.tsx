@@ -77,7 +77,7 @@ export default function Contact() {
             </motion.div>
             
             <motion.h1
-              className="text-3xl sm:text-4xl md:text-5xl font-black leading-tight mb-4"
+              className="text-3xl sm:text-4xl md:text-4xl font-black leading-tight mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
@@ -132,7 +132,7 @@ export default function Contact() {
                 </motion.div>
 
                 <motion.h1
-                  className="text-4xl lg:text-5xl xl:text-6xl font-black leading-[0.9] tracking-tight"
+                  className="text-3xl lg:text-4xl xl:text-5xl font-black leading-[0.95] tracking-tight"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 }}

@@ -123,7 +123,7 @@ export default function Resume() {
                 </motion.div>
 
                 <motion.h1
-                  className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-[0.9] tracking-tight mb-6 animate-pulse-subtle"
+                  className="text-3xl sm:text-4xl lg:text-5xl xl:text-5xl font-black leading-[0.95] tracking-tight mb-6 animate-pulse-subtle"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}

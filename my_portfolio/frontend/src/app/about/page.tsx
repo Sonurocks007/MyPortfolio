@@ -288,7 +288,7 @@ export default function About() {
             {/* Profile Content */}
             <div className="flex-1 text-center lg:text-left">
               <motion.h2
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-4 sm:mb-6 leading-[0.9] tracking-tight"
+                className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-black mb-4 sm:mb-6 leading-[0.95] tracking-tight"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
@@ -345,7 +345,7 @@ export default function About() {
 
             <div className="relative p-4 sm:p-6 md:p-8 lg:p-12">
               <div className="text-center mb-8 sm:mb-12">
-                <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 text-transparent bg-clip-text drop-shadow-sm">
+                <h3 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-black bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 text-transparent bg-clip-text drop-shadow-sm">
                   Technical Expertise
                 </h3>
               </div>
@@ -439,7 +439,7 @@ export default function About() {
 
             <div className="relative p-4 sm:p-6 md:p-8 lg:p-12">
               <div className="text-center mb-8 sm:mb-12">
-                <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 text-transparent bg-clip-text">
+                <h3 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-black bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 text-transparent bg-clip-text">
                   Experience
                 </h3>
               </div>
@@ -576,7 +576,7 @@ export default function About() {
 
             <div className="relative p-4 sm:p-6 md:p-8 lg:p-12">
               <div className="text-center mb-8 sm:mb-12">
-                <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400 text-transparent bg-clip-text">
+                <h3 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-black bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400 text-transparent bg-clip-text">
                   Current Focus
                 </h3>
               </div>

@@ -270,7 +270,7 @@ export default function Home() {
             }}
           >
             <div className="relative">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-[0.9] tracking-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl font-black leading-[0.95] tracking-tight">
                 <motion.span
                   className="block bg-gradient-to-br from-gray-900 via-blue-800 to-purple-800 dark:from-white dark:via-blue-200 dark:to-purple-200 text-transparent bg-clip-text drop-shadow-sm"
                   initial={{ opacity: 0, y: 30 }}
@@ -285,7 +285,7 @@ export default function Home() {
                   Hi, I'm Sonu
                 </motion.span>
                 <motion.span
-                  className="block mt-1 sm:mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 text-transparent bg-clip-text drop-shadow-sm"
+                  className="block mt-1 sm:mt-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 text-transparent bg-clip-text drop-shadow-sm"
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{
@@ -341,7 +341,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.7 }}
           >
             <div className="relative">
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 dark:text-gray-300 leading-relaxed">
+              <p className="text-base sm:text-lg md:text-lg lg:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
                 Hi, I’m{" "}
                 <span className="font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 text-transparent bg-clip-text">
                   Sonu Gupta
