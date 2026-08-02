@@ -10,7 +10,7 @@ const connectDB = async (): Promise<void> => {
     console.log('MongoDB connected successfully');
   } catch (err: any) {
     console.error('MongoDB connection error:', err.message);
-    process.exit(1);
+    console.warn('Server will continue running, but database features will be disabled until connection is restored.');
   }
 };
 

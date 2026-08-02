@@ -15,7 +15,7 @@ const connectDB = async () => {
     }
     catch (err) {
         console.error('MongoDB connection error:', err.message);
-        process.exit(1);
+        console.warn('Server will continue running, but database features will be disabled until connection is restored.');
     }
 };
 exports.default = connectDB;

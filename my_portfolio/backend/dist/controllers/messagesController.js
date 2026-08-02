@@ -4,13 +4,24 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.sendMessage = void 0;
+const mongoose_1 = __importDefault(require("mongoose"));
 const Message_1 = __importDefault(require("../models/Message"));
 const sendMessage = async (req, res) => {
     const { name, email, message } = req.body;
     try {
-        // Save message to database
-        const newMsg = new Message_1.default({ name, email, message });
-        await newMsg.save();
+        let dbSuccess = false;
+        // Attempt to save message to database
+        try {
+            if (mongoose_1.default.connection.readyState !== 1) {
+                throw new Error("Database disconnected. Skipping save.");
+            }
+            const newMsg = new Message_1.default({ name, email, message });
+            await newMsg.save();
+            dbSuccess = true;
+        }
+        catch (dbError) {
+            console.warn("Failed to save message to database:", dbError.message);
+        }
         // Try to send email (optional - don't fail if email fails)
         try {
             if (process.env.SENDGRID_API_KEY) {
@@ -60,7 +71,7 @@ const sendMessage = async (req, res) => {
                 });
                 const emailOptions = {
                     from: `"Portfolio Contact" <${process.env.EMAIL_USER}>`,
-                    to: 'sg5798671@gmail.com', // Always send to your email
+                    to: process.env.EMAIL_USER, // Send to the configured email
                     subject: `New Portfolio Contact from ${name}`,
                     text: `Hello Sonu,\n\nYou have received a new message through your portfolio contact form:\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}\n\nBest regards,\nPortfolio System`,
                     html: `
@@ -88,10 +99,14 @@ const sendMessage = async (req, res) => {
         catch (emailError) {
             console.warn("Express message send email error:", emailError.message);
         }
+        if (!dbSuccess && !process.env.SENDGRID_API_KEY && (!process.env.EMAIL_USER || !process.env.EMAIL_PASS)) {
+            res.status(500).json({ error: 'Message service is temporarily unavailable. Please try again later.' });
+            return;
+        }
         res.json({ success: true, message: 'Message sent successfully!' });
     }
     catch (err) {
-        res.status(500).json({ error: 'Failed to save message' });
+        res.status(500).json({ error: 'Failed to process message' });
     }
 };
 exports.sendMessage = sendMessage;
